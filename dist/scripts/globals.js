@@ -9,8 +9,8 @@ Operating System Concepts 8th edition by Silberschatz, Galvin, and Gagne.  ISBN 
 // Global "CONSTANTS" (There is currently no const or final or readonly type annotation in TypeScript.)
 // TODO: Make a global object and use that instead of the "_" naming convention in the global namespace.
 //
-var APP_NAME = "debbie";
-var APP_VERSION = "0.42";
+var APP_NAME = "Debbie Sylvester";
+var APP_VERSION = "1.0";
 
 var CPU_CLOCK_INTERVAL = 100;
 
@@ -23,6 +23,7 @@ var KEYBOARD_IRQ = 1;
 // Global Variables
 //
 var _CPU;
+
 
 var _OSclock = 0;
 
