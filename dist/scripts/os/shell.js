@@ -29,9 +29,16 @@ var TSOS;
             this.commandList[this.commandList.length] = sc;
 
 			// date
-			sc = new TSOS.ShellCommand(this.shellDate, "date", "- Displays the current version date and time.");
+			sc = new TSOS.ShellCommand(this.shellDate, "date", "- Displays the current date and time.");
             this.commandList[this.commandList.length] = sc;
-
+			
+			// whereami
+			sc = new TSOS.ShellCommand(this.shellWhereami, "whereami", "- Displays my current location.");
+            this.commandList[this.commandList.length] = sc;
+			
+			// whereareyou
+			sc = new TSOS.ShellCommand(this.shellWhereareyou, "whereareyou", "- Displays your current location.");
+            this.commandList[this.commandList.length] = sc;
 			
             // help
             sc = new TSOS.ShellCommand(this.shellHelp, "help", "- This is the help command. Seek help.");
@@ -195,9 +202,19 @@ var TSOS;
             _StdOut.putText(APP_NAME + " version " + APP_VERSION);
         };
 
-	//	Shell.prototype.shellDate = var today = new Date(); {
-	//	    _StdOut.putText(today);
-    //   };
+		
+//		Shell.prototype.shellDate = function(args); {
+//			var today = new Date();
+//		    _StdOut.putText(today);
+//       };
+	
+		Shell.prototype.shellWhereami = function () {
+            _StdOut.putText( "Lost in Space " );
+        };
+		
+		Shell.prototype.shellWhereareyou = function () {
+            _StdOut.putText( "With Dr Spock " );
+        };
 				
         Shell.prototype.shellHelp = function (args) {
             _StdOut.putText("Commands:");
