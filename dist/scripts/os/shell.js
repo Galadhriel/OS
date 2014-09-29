@@ -82,7 +82,8 @@ var TSOS;
 
         Shell.prototype.putPrompt = function () {
             _StdOut.putText(this.promptStr);
-			document.getElementById('taStatus').value = Date();
+			document.getElementById('taStatus').value = Date() + STATUS_STRING;
+			STATUS_STRING = "";
         };
 
         Shell.prototype.handleInput = function (buffer) {
@@ -214,7 +215,7 @@ var TSOS;
         };
 	
         Shell.prototype.shellStatus = function(args) {
-		  document.getElementById('taStatus').value = args;
+		  STATUS_STRING = args;
         };
 	 
 
