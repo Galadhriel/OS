@@ -40,6 +40,11 @@ var TSOS;
 			sc = new TSOS.ShellCommand(this.shellWhereareyou, "whereareyou", "- Displays your current location.");
             this.commandList[this.commandList.length] = sc;
 			
+			// status
+			sc = new TSOS.ShellCommand(this.shellStatus, "status", "- Displays your current status.");
+            this.commandList[this.commandList.length] = sc;
+			
+			
             // help
             sc = new TSOS.ShellCommand(this.shellHelp, "help", "- This is the help command. Seek help.");
             this.commandList[this.commandList.length] = sc;
@@ -77,6 +82,7 @@ var TSOS;
 
         Shell.prototype.putPrompt = function () {
             _StdOut.putText(this.promptStr);
+			document.getElementById('taStatus').value = Date();
         };
 
         Shell.prototype.handleInput = function (buffer) {
@@ -202,12 +208,17 @@ var TSOS;
             _StdOut.putText(APP_NAME + " version " + APP_VERSION);
         };
 
-		
-//		Shell.prototype.shellDate = function(args); {
-//			var today = new Date();
-//		    _StdOut.putText(today);
-//       };
+		 
+		 Shell.prototype.shellDate = function() {
+		 _StdOut.putText("today is " + Date());
+        };
 	
+        Shell.prototype.shellStatus = function(args) {
+		  document.getElementById('taStatus').value = args;
+        };
+	 
+
+
 		Shell.prototype.shellWhereami = function () {
             _StdOut.putText( "Lost in Space " );
         };

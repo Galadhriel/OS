@@ -101,6 +101,7 @@ var TSOS;
                 var w = CanvasTextFunctions.measure(font, size, text);
                 return CanvasTextFunctions.draw(ctx, font, size, x - w / 2, y, text);
             };
+			
         };
         CanvasTextFunctions.letters = {
             ' ': { width: 16, points: [] },

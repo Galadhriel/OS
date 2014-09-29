@@ -33,6 +33,10 @@ var TSOS;
             this.currentXPosition = 0;
             this.currentYPosition = this.currentFontSize;
         };
+		
+		
+			
+			
 
         Console.prototype.handleInput = function () {
             while (_KernelInputQueue.getSize() > 0) {
