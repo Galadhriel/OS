@@ -83,6 +83,8 @@ var TSOS;
         Console.prototype.advanceLine = function () {
             this.currentXPosition = 0;
             this.currentYPosition += _DefaultFontSize + _FontHeightMargin;
+//				if(this.currentYPosition==45o);
+//					this.currentYpostion = 0;
             // TODO: Handle scrolling. (Project 1)
         };
         return Console;

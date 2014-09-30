@@ -41,7 +41,7 @@ var TSOS;
             this.commandList[this.commandList.length] = sc;
 			
 			// status
-			sc = new TSOS.ShellCommand(this.shellStatus, "status", "- Displays your current status.");
+			sc = new TSOS.ShellCommand(this.shellStatus, "status", "- Displays the date and what you enter here.");
             this.commandList[this.commandList.length] = sc;
 			
 			
@@ -84,6 +84,7 @@ var TSOS;
             _StdOut.putText(this.promptStr);
 			document.getElementById('taStatus').value = Date() + STATUS_STRING;
 			STATUS_STRING = "";
+			
         };
 
         Shell.prototype.handleInput = function (buffer) {
@@ -208,7 +209,6 @@ var TSOS;
         Shell.prototype.shellVer = function (args) {
             _StdOut.putText(APP_NAME + " version " + APP_VERSION);
         };
-
 		 
 		 Shell.prototype.shellDate = function() {
 		 _StdOut.putText("today is " + Date());
@@ -218,14 +218,12 @@ var TSOS;
 		  STATUS_STRING = args;
         };
 	 
-
-
 		Shell.prototype.shellWhereami = function () {
-            _StdOut.putText( "Lost in Space " );
+            _StdOut.putText( "Stuck in this box you call a computer!" );
         };
 		
 		Shell.prototype.shellWhereareyou = function () {
-            _StdOut.putText( "With Dr Spock " );
+            _StdOut.putText( "With Dr Spock on the Star Ship Enterprise" );
         };
 				
         Shell.prototype.shellHelp = function (args) {

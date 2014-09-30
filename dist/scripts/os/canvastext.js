@@ -46,7 +46,7 @@ var TSOS;
             var total = 0;
             var len = str.length;
             var mag = size / 25.0;
-
+			
             ctx.save();
             ctx.lineCap = "round";
             ctx.lineWidth = 2.0 * mag;
